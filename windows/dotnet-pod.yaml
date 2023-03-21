@@ -10,5 +10,9 @@ spec:
     image: mcr.microsoft.com/dotnet/core/sdk:2.1
     tty: true
   nodeSelector:
-    kubernetes.io/os: windobe
-  securityContext: {}
+    svc/med: windows
+  tolerations:
+  - effect: NoSchedule
+    key: node.kubernetes.io/os
+    operator: Equal
+    value: windows
