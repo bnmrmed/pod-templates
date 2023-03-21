@@ -11,3 +11,4 @@ spec:
     tty: true
   nodeSelector:
     kubernetes.io/os: windows
+  securityContext: {}
